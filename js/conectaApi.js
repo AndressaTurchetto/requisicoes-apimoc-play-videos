@@ -5,7 +5,7 @@ async function listaVideos() {
     return conexaoConvertida;
 }
 
-async function criarVideo(titulo, descricao, url, imagem) {
+async function criaVideo(titulo, descricao, url, imagem) {
     const conexao = await fetch("http://localhost:3000/videos", {
         method:"POST",
         headers: {
@@ -26,5 +26,5 @@ async function criarVideo(titulo, descricao, url, imagem) {
 
 export const conectaApi = {
     listaVideos,
-    criarVideo
+    criaVideo
 }
