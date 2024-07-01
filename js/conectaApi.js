@@ -18,7 +18,9 @@ async function criaVideo(titulo, descricao, url, imagem) {
             imagem: imagem
         })
     });
-
+    if (!conexao.ok) {
+        throw new Error("Não foi possível enviar o vídeo")
+    }
     const conexaoConvertida = conexao.json();
 
     return conexaoConvertida;
